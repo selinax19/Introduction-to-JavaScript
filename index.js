@@ -19,9 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge= 18;
 
-
-
+if(votingAge>= 18){
+  console.log(true);
+}else{
+  console.log(false);
+}
+}
 /*
 Task 1b - Values
 
