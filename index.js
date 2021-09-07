@@ -26,7 +26,7 @@ if(votingAge>= 18){
 }else{
   console.log(false);
 }
-}
+
 /*
 Task 1b - Values
 
@@ -77,7 +77,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-console.log('task 1 d:'), multiply(5,5));
+console.log('task 1 d:'), multiply(5,5);
 
 
 
@@ -131,7 +131,7 @@ function hungryDog(weight,age){
     return weight * 0.05;
   }else if(age >= 1 && weight >= 6 && weight <=10){
     return weight * 0.04;
-  }else if(age >= 1 && weight <= 11 && >= 15){
+  }else if(age >= 1 && weight <= 11 && weight >= 15){
     return weight * 0.03;
   }else if(age >= 1 && weight > 15){
     return weight * 0.02;
@@ -172,9 +172,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer> 0.67){
+  computer = 'scissor';
 }
+
+function game(user, computer){
+  if(user === computer){
+    return"it's a tie";
+  }else if(user === 'rock' && computer === 'scissors'){
+    return 'you win!';
+  }else if(user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else if(user === 'scissors'&& computer === 'paper'){
+  return 'you win!';
+  }else{
+    return 'you lose';
+  }
+}
+
+  console.log('task 4'), game('paper', computer);
+
 
 
 
@@ -189,10 +212,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
+console.log('task 5a',miles(2));
 
 
 //Task 5b - Feet to CM
@@ -203,10 +227,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
+console.log('task 5b',feet(160));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
