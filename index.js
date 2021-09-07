@@ -133,7 +133,7 @@ function hungryDog(weight,age){
     return weight * 0.02;
   }else if(age < 1 && age >= 0.583){
     return weight * 0.04;
-  }else if(age <0.583 && age >= 0.333){
+  }else if(age < 0.583 && age >= 0.333){
     return weight * 0.05;
   }else if(age < 0.333){
     return weight * 0.10;
@@ -244,13 +244,13 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-      for(let i = number; i > 0; i --){
-        return '${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall';
+      for(let i = number; i > 0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
       }
 
       }
       console.log('task 6', annoyingSong(8));
-      console.log('task 6', annoyingSong(7))
+      console.log('task 6', annoyingSong(7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -269,13 +269,13 @@ Using the grade function below do the following:
 */
 
 function grade(number){
-if(number >= 90){
+if(number >= 90 && number <= 100){
   return 'you got an A';
-}else if(number < 90 || number >= 80){
+}else if(number >= 90 || number < 90){
   return 'you got a B';
-}else if(number < 80 && number >= 70){
+}else if(number >= 70 && number < 80){
   return 'you got a C';
-}else if(number < 70 && number >= 60){
+}else if(number >= 60 && number < 70){
   return 'you got a D';
 }else if(number < 60){
   return 'you got an F';
