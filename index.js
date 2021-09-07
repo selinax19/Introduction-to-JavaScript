@@ -22,9 +22,9 @@ Do the following:
 const votingAge= 18;
 
 if(votingAge>= 18){
-  console.log(true);
+  console.log('task 1 a:',true);
 }else{
-  console.log(false);
+  console.log('task 1 a:',false);
 }
 
 /*
@@ -47,12 +47,6 @@ if(emotion ==='heartbroken'){
 }
 
 console.log('task 1 b:', person);
-
-
-
-
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -63,7 +57,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-console.log('task 1 c:'), Number('1999')
+const party = '1999';
+console.log('task 1 c:', Number(party));
 
 /*
 Task 1d - Multiply
@@ -77,7 +72,8 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-console.log('task 1 d:'), multiply(5,5);
+
+console.log('task 1 d:', multiply(5, 5));
 
 
 
@@ -131,7 +127,7 @@ function hungryDog(weight,age){
     return weight * 0.05;
   }else if(age >= 1 && weight >= 6 && weight <=10){
     return weight * 0.04;
-  }else if(age >= 1 && weight <= 11 && weight >= 15){
+  }else if(age >= 1 && weight >=11 && weight <= 15){
     return weight * 0.03;
   }else if(age >= 1 && weight > 15){
     return weight * 0.02;
@@ -143,8 +139,7 @@ function hungryDog(weight,age){
     return weight * 0.10;
   }else{
     return 'please try again';
-  }
-  
+  } 
 }
 
 console.log('task 3', hungryDog(15,1));
@@ -178,25 +173,29 @@ if(computer <= 0.34){
   computer = 'rock';
 }else if(computer <= 0.67){
   computer = 'paper';
-}else if(computer> 0.67){
-  computer = 'scissor';
+}else if(computer > 0.67){
+  computer = 'scissors';
 }
 
 function game(user, computer){
   if(user === computer){
-    return"it's a tie";
+    return "it's a tie";
   }else if(user === 'rock' && computer === 'scissors'){
     return 'you win!';
+  }else if(user === 'rock' && computer === 'paper'){
+    return 'you lose!';
   }else if(user === 'paper' && computer === 'rock'){
     return 'you win!';
+  }else if(user === 'paper' && computer === 'scissors'){
+    return 'you lose!';
   }else if(user === 'scissors'&& computer === 'paper'){
   return 'you win!';
-  }else{
-    return 'you lose';
+}else if(user === 'scissors' && computer === 'rock'){
+  return 'you lose!';
   }
 }
 
-  console.log('task 4'), game('paper', computer);
+  console.log('task 4', game('paper', computer));
 
 
 
